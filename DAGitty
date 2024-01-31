@@ -1,1 +1,103 @@
+# This is code for DAGitty.net for final DAG model constructed using evidence synthesis and expert opinion.
+# This DAG model was used for PHD paper entitle: Constructing Causal Pathways for Premature Cardiovascular Disease Mortality: A Comprehensive Approach Integrating Evidence Synthesis and Expert Domain Knowledge through Directed Acyclic Graphs (DAGs)
+# Intruction: Copy this code and paste it in DAGitty.net inside model code box.
 
+
+
+dag {
+bb="0,0,1,1"
+"Access to Healthcare" [pos="0.544,0.680"]
+"Alcohol intake" [pos="0.298,0.495"]
+"Awareness & screening" [pos="0.676,0.722"]
+"CVD (IHD/Stroke)" [pos="0.616,0.279"]
+"CVD complications" [pos="0.775,0.330"]
+"Cultural norms/belief" [pos="0.174,0.446"]
+"Dietary pattern" [pos="0.313,0.695"]
+"Genetic & Family history " [pos="0.415,0.069"]
+"Health literacy" [pos="0.258,0.783"]
+"Hormonal Influence (sex hormones)" [pos="0.324,0.169"]
+"Other chronic diseases" [pos="0.633,0.096"]
+"Physical activity" [pos="0.304,0.590"]
+"Premature CVD mortality" [outcome,pos="0.891,0.410"]
+"Psychological factors" [pos="0.763,0.566"]
+"Treatment and control" [pos="0.692,0.470"]
+Age [pos="0.227,0.353"]
+DM [exposure,pos="0.500,0.234"]
+Ethnicity [pos="0.263,0.103"]
+HPL [exposure,pos="0.498,0.362"]
+HPT [exposure,pos="0.514,0.498"]
+Obesity [exposure,pos="0.505,0.605"]
+SES [pos="0.401,0.763"]
+Sex [pos="0.208,0.275"]
+Smoking [pos="0.300,0.391"]
+"Access to Healthcare" -> "Awareness & screening" [pos="0.634,0.658"]
+"Access to Healthcare" -> "Treatment and control" [pos="0.611,0.621"]
+"Alcohol intake" -> "CVD (IHD/Stroke)" [pos="0.409,0.263"]
+"Alcohol intake" -> "CVD complications" [pos="0.527,0.411"]
+"Alcohol intake" -> HPT [pos="0.418,0.518"]
+"Alcohol intake" -> Obesity [pos="0.390,0.553"]
+"Awareness & screening" -> "Treatment and control"
+"CVD (IHD/Stroke)" -> "CVD complications"
+"CVD (IHD/Stroke)" -> "Treatment and control"
+"CVD complications" -> "Premature CVD mortality" [pos="0.828,0.342"]
+"Cultural norms/belief" -> "Alcohol intake" [pos="0.247,0.428"]
+"Cultural norms/belief" -> "Dietary pattern" [pos="0.172,0.621"]
+"Dietary pattern" -> "CVD (IHD/Stroke)" [pos="0.617,0.702"]
+"Dietary pattern" -> DM [pos="0.377,0.388"]
+"Dietary pattern" -> HPL [pos="0.390,0.486"]
+"Dietary pattern" -> HPT [pos="0.463,0.596"]
+"Dietary pattern" -> Obesity
+"Genetic & Family history " -> "CVD (IHD/Stroke)" [pos="0.580,0.126"]
+"Genetic & Family history " -> "CVD complications" [pos="0.605,0.085"]
+"Genetic & Family history " -> "Other chronic diseases" [pos="0.524,0.062"]
+"Genetic & Family history " -> DM [pos="0.491,0.107"]
+"Genetic & Family history " -> HPL [pos="0.424,0.182"]
+"Genetic & Family history " -> HPT [pos="0.421,0.317"]
+"Genetic & Family history " -> Obesity [pos="0.391,0.369"]
+"Health literacy" -> "Alcohol intake" [pos="0.169,0.560"]
+"Health literacy" -> "Awareness & screening" [pos="0.509,0.942"]
+"Health literacy" -> "Dietary pattern"
+"Health literacy" -> "Physical activity" [pos="0.211,0.618"]
+"Health literacy" -> "Treatment and control" [pos="0.628,0.933"]
+"Health literacy" -> Smoking [pos="0.134,0.569"]
+"Hormonal Influence (sex hormones)" -> "CVD (IHD/Stroke)" [pos="0.541,0.091"]
+"Hormonal Influence (sex hormones)" -> DM [pos="0.450,0.143"]
+"Hormonal Influence (sex hormones)" -> HPL
+"Hormonal Influence (sex hormones)" -> HPT [pos="0.397,0.321"]
+"Hormonal Influence (sex hormones)" -> Obesity [pos="0.364,0.431"]
+"Other chronic diseases" -> "CVD complications" [pos="0.731,0.201"]
+"Other chronic diseases" -> "Premature CVD mortality" [pos="0.761,0.159"]
+"Physical activity" -> "CVD (IHD/Stroke)" [pos="0.362,0.596"]
+"Physical activity" -> DM [pos="0.370,0.315"]
+"Physical activity" -> HPL [pos="0.391,0.405"]
+"Physical activity" -> HPT [pos="0.391,0.598"]
+"Physical activity" -> Obesity [pos="0.422,0.598"]
+"Psychological factors" -> "CVD (IHD/Stroke)" [pos="0.553,0.576"]
+"Psychological factors" -> "Treatment and control" [pos="0.720,0.485"]
+"Treatment and control" -> "CVD complications" [pos="0.715,0.405"]
+"Treatment and control" -> "Premature CVD mortality" [pos="0.828,0.417"]
+Age -> "CVD (IHD/Stroke)" [pos="0.414,0.033"]
+Age -> "CVD complications" [pos="0.497,0.001"]
+Age -> "Hormonal Influence (sex hormones)"
+Age -> "Physical activity" [pos="0.180,0.472"]
+Age -> "Treatment and control" [pos="0.490,0.190"]
+Age -> DM [pos="0.361,0.262"]
+Age -> HPT [pos="0.364,0.329"]
+DM -> "CVD (IHD/Stroke)"
+DM -> "Treatment and control" [pos="0.703,0.177"]
+Ethnicity -> "Cultural norms/belief" [pos="0.133,0.247"]
+Ethnicity -> "Genetic & Family history " [pos="0.328,0.056"]
+HPL -> "CVD (IHD/Stroke)"
+HPL -> "Treatment and control" [pos="0.579,0.402"]
+HPT -> "CVD (IHD/Stroke)" [pos="0.551,0.421"]
+HPT -> "Treatment and control" [pos="0.578,0.479"]
+Obesity -> "CVD (IHD/Stroke)" [pos="0.560,0.538"]
+SES -> "Access to Healthcare" [pos="0.444,0.700"]
+SES -> "Awareness & screening" [pos="0.572,0.808"]
+SES -> "Health literacy" [pos="0.346,0.764"]
+SES -> "Psychological factors" [pos="0.670,0.978"]
+SES -> "Treatment and control" [pos="0.634,0.755"]
+Sex -> "Hormonal Influence (sex hormones)" [pos="0.214,0.200"]
+Smoking -> "CVD (IHD/Stroke)" [pos="0.390,0.340"]
+Smoking -> HPT
+}
